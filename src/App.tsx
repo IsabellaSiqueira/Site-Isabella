@@ -119,8 +119,8 @@ export default function App() {
           >
             <div className="absolute inset-0 bg-linear-to-t from-ink/40 to-transparent z-10 opacity-60 group-hover:opacity-20 transition-opacity" />
             <img 
-              src="https://picsum.photos/seed/macbook-tech-minimal/800/1000" 
-              alt="Tecnologia e Performance"
+              src="https://images.unsplash.com/photo-1579642026965-f9a0b8faba6a?q=80&w=1365&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" 
+              alt="Avenida Paulista - São Paulo"
               className="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-700 scale-105 group-hover:scale-100"
               referrerPolicy="no-referrer"
             />
@@ -183,8 +183,8 @@ export default function App() {
             <div className="blueprint-border aspect-square shadow-xl overflow-hidden">
               <div className="absolute inset-0 bg-linear-to-tr from-accent/10 to-transparent z-10 pointer-events-none" />
               <img 
-                src="https://picsum.photos/seed/sao-paulo-paulista-fiap/1000/1000" 
-                alt="Avenida Paulista - São Paulo"
+                src="https://images.unsplash.com/photo-1525547719571-a2d4ac8945e2?q=80&w=1364&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" 
+                alt="Tecnologia e Performance"
                 className="w-full h-full object-cover"
                 referrerPolicy="no-referrer"
               />
