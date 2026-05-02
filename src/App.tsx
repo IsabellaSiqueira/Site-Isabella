@@ -58,6 +58,14 @@ export default function App() {
     {
       q: "Vocês usam templates prontos?",
       a: "Não. Todo projeto é desenhado do zero no Figma para atender exatamente às regras da sua operação, resultando em um sistema exclusivo e focado em conversão."
+    },
+    {
+      q: "O que acontece depois que o projeto é entregue? Vocês oferecem suporte?",
+      a: "Sim. Após o lançamento, oferecemos um período de acompanhamento e garantia para garantir a estabilidade do sistema. Depois disso, você pode optar por pacotes de manutenção contínua e evolução do produto, garantindo que sua plataforma cresça junto com a sua empresa."
+    },
+    {
+      q: "Como funcionam os orçamentos e prazos?",
+      a: "Como trabalhamos com soluções sob medida de alta complexidade, não temos pacotes tabelados. O processo começa com uma Sessão de Estratégia gratuita para entendermos o seu cenário. A partir daí, desenhamos o escopo, o cronograma de entregas (dividido em etapas ágeis) e o investimento necessário para a sua operação escalar."
     }
   ];
 
