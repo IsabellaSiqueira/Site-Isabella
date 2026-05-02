@@ -18,12 +18,48 @@ import {
   CheckCircle2,
   Handshake,
   Smartphone,
-  Globe
+  Globe,
+  Figma,
+  Database,
+  Zap,
+  Cpu,
+  ChevronDown,
+  Code2,
+  Wind,
+  Layers,
+  Palette,
+  Layout,
+  FileText,
+  Users2,
+  MousePointer2,
+  PenTool,
+  Video,
+  Box
 } from "lucide-react";
 import { useState } from "react";
 
 export default function App() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const [openFaqIndex, setOpenFaqIndex] = useState<number | null>(null);
+
+  const faqData = [
+    {
+      q: "Como funciona a etapa de desenvolvimento?",
+      a: "Eu lidero pessoalmente toda a estratégia, o design (UX/UI) e a gestão do projeto. Para a etapa de programação de sistemas complexos, conto com um braço técnico parceiro especialista em código. Seu contato é 100% comigo, garantindo que a visão de negócios seja executada com perfeição."
+    },
+    {
+      q: "Como a automação pode ajudar minha empresa?",
+      a: "Conectamos seus sistemas para que tarefas repetitivas (como gestão de leads, envio de propostas e organização de planilhas) sejam feitas por robôs e IA, economizando horas da sua equipe."
+    },
+    {
+      q: "Qual é o tempo médio de um projeto?",
+      a: "Depende da complexidade, mas dividimos as entregas em ciclos rápidos para que você já veja resultados nas primeiras semanas."
+    },
+    {
+      q: "Vocês usam templates prontos?",
+      a: "Não. Todo projeto é desenhado do zero no Figma para atender exatamente às regras da sua operação, resultando em um sistema exclusivo e focado em conversão."
+    }
+  ];
 
   const fadeIn = {
     initial: { opacity: 0, y: 15 },
@@ -95,17 +131,17 @@ export default function App() {
           <motion.div {...fadeIn} className="flex flex-col gap-8">
             <div className="tech-label flex items-center gap-2">
               <ShieldCheck className="w-3 h-3 text-accent animate-pulse" />
-              Consultoria Especializada em João Pessoa
+              CONSULTORIA DE PRODUTO DIGITAL
             </div>
             <h1 className="font-display text-5xl md:text-8xl font-bold leading-[0.95] tracking-tighter text-gradient">
-              O site da sua empresa deve ser o seu <span className="text-accent italic">melhor vendedor</span>.
+              Design estratégico e inteligência para <span className="text-accent italic">escalar a sua operação</span>.
             </h1>
             <p className="text-xl md:text-2xl leading-relaxed text-slate font-medium max-w-2xl">
-              Tecnologia de ponta de São Paulo com a confiança e o compromisso da Paraíba. Criamos sites profissionais que funcionam de verdade e trazem novos clientes para o seu negócio.
+              Sou Product Designer e Estrategista Digital especializada em transformar necessidades de negócios em soluções escaláveis. Uno minha experiência corporativa em análise de requisitos com o design centrado no usuário e automações inteligentes para estruturar plataformas de alta performance.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 pt-4">
               <a href="#contato" className="btn-gradient px-10 py-5 font-display font-bold text-sm uppercase tracking-widest flex items-center justify-center gap-3">
-                Quero um Diagnóstico Gratuito
+                Agendar Sessão de Estratégia
                 <ArrowRight className="w-5 h-5" />
               </a>
             </div>
@@ -119,17 +155,117 @@ export default function App() {
           >
             <div className="absolute inset-0 bg-linear-to-t from-ink/40 to-transparent z-10 opacity-60 group-hover:opacity-20 transition-opacity" />
             <img 
-              src="https://images.unsplash.com/photo-1579642026965-f9a0b8faba6a?q=80&w=1365&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" 
-              alt="Avenida Paulista - São Paulo"
+              src="https://images.unsplash.com/photo-1639322537228-f710d846310a?q=80&w=2032&auto=format&fit=crop" 
+              alt="Interface Abstrata de Tecnologia"
               className="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-700 scale-105 group-hover:scale-100"
               referrerPolicy="no-referrer"
             />
             <div className="absolute inset-0 border-[20px] border-white/10 pointer-events-none z-20" />
             <div className="absolute bottom-6 left-6 bg-white p-4 shadow-lg z-30 rounded-lg">
-              <div className="tech-label mb-1">Localização</div>
-              <div className="font-display font-bold text-sm">JPA // SP</div>
+              <div className="tech-label mb-1">Especialidades</div>
+              <div className="font-display font-bold text-sm">UI/UX, 3D & Motion Design</div>
             </div>
           </motion.div>
+        </div>
+      </section>
+
+      {/* Expertise & Tech Stack Section */}
+      <section className="py-20 bg-paper/30 border-b border-border">
+        <div className="max-w-7xl mx-auto px-6">
+          <div className="text-center mb-16">
+            <p className="tech-label text-accent mb-4">Nossa Stack Tecnológica</p>
+            <h2 className="font-display text-3xl md:text-5xl font-bold uppercase tracking-tight">Especialidades & Ferramentas</h2>
+          </div>
+
+          <div className="grid md:grid-cols-3 gap-8">
+            {/* Pillar 1: Design, 3D & Motion */}
+            <div className="p-8 border border-border bg-white rounded-2xl shadow-sm hover:shadow-md transition-shadow">
+              <div className="flex items-center gap-3 mb-6">
+                <div className="p-3 bg-accent/10 rounded-lg text-accent">
+                  <Palette className="w-6 h-6" />
+                </div>
+                <h3 className="font-display font-bold text-lg uppercase">Design, 3D & Motion</h3>
+              </div>
+              <ul className="flex flex-col gap-4">
+                <li className="flex items-center gap-3 text-slate font-medium">
+                  <Figma className="w-5 h-5 opacity-40" />
+                  <span>Figma</span>
+                </li>
+                <li className="flex items-center gap-3 text-slate font-medium">
+                  <Layout className="w-5 h-5 opacity-40" />
+                  <span>Photoshop</span>
+                </li>
+                <li className="flex items-center gap-3 text-slate font-medium">
+                  <PenTool className="w-5 h-5 opacity-40" />
+                  <span>Illustrator</span>
+                </li>
+                <li className="flex items-center gap-3 text-slate font-medium">
+                  <Video className="w-5 h-5 opacity-40" />
+                  <span>After Effects (Animação)</span>
+                </li>
+                <li className="flex items-center gap-3 text-slate font-medium">
+                  <Box className="w-5 h-5 opacity-40" />
+                  <span>Maya (Modelagem 3D)</span>
+                </li>
+                <li className="flex items-center gap-3 text-slate font-medium">
+                  <Palette className="w-5 h-5 opacity-40" />
+                  <span>Substance Painter (Texturização)</span>
+                </li>
+              </ul>
+            </div>
+
+            {/* Pillar 2: Gestão de Desenvolvimento */}
+            <div className="p-8 border border-border bg-white rounded-2xl shadow-sm hover:shadow-md transition-shadow">
+              <div className="flex items-center gap-3 mb-6">
+                <div className="p-3 bg-accent/10 rounded-lg text-accent">
+                  <Cpu className="w-6 h-6" />
+                </div>
+                <h3 className="font-display font-bold text-lg uppercase">Gestão de Desenvolvimento</h3>
+              </div>
+              <ul className="flex flex-col gap-4">
+                <li className="flex items-center gap-3 text-slate font-medium">
+                  <Code2 className="w-5 h-5 opacity-40" />
+                  <span>Desenvolvimento Sob Medida</span>
+                </li>
+                <li className="flex items-center gap-3 text-slate font-medium">
+                  <Zap className="w-5 h-5 opacity-40" />
+                  <span>Sistemas de Alta Performance</span>
+                </li>
+                <li className="flex items-center gap-3 text-slate font-medium">
+                  <Layers className="w-5 h-5 opacity-40" />
+                  <span>Orquestração Técnica</span>
+                </li>
+              </ul>
+            </div>
+
+            {/* Pillar 3: Gestão & Dados */}
+            <div className="p-8 border border-border bg-white rounded-2xl shadow-sm hover:shadow-md transition-shadow">
+              <div className="flex items-center gap-3 mb-6">
+                <div className="p-3 bg-accent/10 rounded-lg text-accent">
+                  <Database className="w-6 h-6" />
+                </div>
+                <h3 className="font-display font-bold text-lg uppercase">Gestão & Dados</h3>
+              </div>
+              <ul className="flex flex-col gap-4">
+                <li className="flex items-center gap-3 text-slate font-medium">
+                  <FileText className="w-5 h-5 opacity-40" />
+                  <span>Análise de Requisitos</span>
+                </li>
+                <li className="flex items-center gap-3 text-slate font-medium">
+                  <Users2 className="w-5 h-5 opacity-40" />
+                  <span>Scrum</span>
+                </li>
+                <li className="flex items-center gap-3 text-slate font-medium">
+                  <Zap className="w-5 h-5 opacity-40" />
+                  <span>Automação (n8n)</span>
+                </li>
+                <li className="flex items-center gap-3 text-slate font-medium">
+                  <Database className="w-5 h-5 opacity-40" />
+                  <span>Banco de Dados (SQL)</span>
+                </li>
+              </ul>
+            </div>
+          </div>
         </div>
       </section>
 
@@ -154,27 +290,27 @@ export default function App() {
           <motion.div {...fadeIn} className="flex flex-col gap-10">
             <div className="tech-label">Sobre Isabella Tragante</div>
             <h2 className="font-display text-4xl md:text-6xl font-bold leading-tight text-gradient">
-              Inovação de São Paulo. <br />
-              <span className="text-slate italic">Compromisso de João Pessoa.</span>
+              Interfaces que convertem. <br />
+              <span className="text-slate italic">Automações que escalam.</span>
             </h2>
             <div className="flex flex-col gap-8 text-lg leading-relaxed text-slate font-medium">
               <p>
-                Estudo Web Design na FIAP, em São Paulo, para trazer o que há de mais moderno no Brasil para a sua empresa. Mas minhas raízes são em João Pessoa, onde aprendi o valor da palavra dada e do trabalho honesto.
+                Sou Web Designer pela FIAP, mas minha base vem da estratégia de negócios e da comunicação. Como ex-Analista de Requisitos, aprendi a mapear a fundo as dores das empresas e estruturar processos. Hoje, atuo como a ponte perfeita entre o seu negócio e a tecnologia. Desenho a estratégia, a experiência do usuário (UX/UI) e gerencio a execução técnica de ponta a ponta, garantindo que a solução final resolva problemas reais da sua operação.
               </p>
               <div className="grid grid-cols-2 gap-6">
                 <div className="p-6 border border-border bg-white shadow-sm hover:shadow-md transition-shadow rounded-xl">
                   <Award className="w-6 h-6 text-accent mb-4" />
                   <div className="tech-label mb-2">Formação</div>
-                  <div className="font-display font-bold text-sm">FIAP São Paulo</div>
+                  <div className="font-display font-bold text-sm">Web Design (FIAP)</div>
                 </div>
                 <div className="p-6 border border-border bg-white shadow-sm hover:shadow-md transition-shadow rounded-xl">
                   <Handshake className="w-6 h-6 text-accent mb-4" />
-                  <div className="tech-label mb-2">Valores</div>
-                  <div className="font-display font-bold text-sm">Ética e Transparência</div>
+                  <div className="tech-label mb-2">Diferencial</div>
+                  <div className="font-display font-bold text-sm">Visão de Ponta a Ponta</div>
                 </div>
               </div>
               <p>
-                Unimos a tecnologia avançada com o atendimento próximo e transparente que você valoriza. Eu não entrego apenas um site bonito; entrego uma ferramenta de vendas organizada para o seu negócio.
+                Por isso, combino design focado em conversão com automações de processos (n8n), inteligência artificial (NotebookLM) e bancos de dados (SQL) para entregar soluções que resolvem problemas reais da sua operação.
               </p>
             </div>
           </motion.div>
@@ -250,9 +386,9 @@ export default function App() {
           <div className="tech-label text-accent mb-12">Como Trabalhamos</div>
           <div className="grid md:grid-cols-3 gap-12">
             {[
-              { step: "01", title: "Conversa Inicial", txt: "Entendemos os desafios do seu negócio e definimos as metas de crescimento." },
-              { step: "02", title: "Planejamento", txt: "Você acompanha cada etapa do desenho do projeto para garantir que tudo esteja do seu jeito." },
-              { step: "03", title: "Entrega e Suporte", txt: "Seu site entra no ar funcionando perfeitamente, com acompanhamento garantido." }
+              { step: "01", title: "Levantamento de Requisitos", txt: "Mergulhamos nas regras do seu negócio. Utilizo minha experiência corporativa para mapear suas necessidades e traduzi-las em especificações técnicas e estratégicas claras." },
+              { step: "02", title: "Prototipação & UX/UI", txt: "Desenho a jornada do usuário e a interface no Figma, alinhando estética e usabilidade antes de escrever qualquer linha de código." },
+              { step: "03", title: "Desenvolvimento & Automação", txt: "Com a estratégia e o design aprovados, orquestro a implementação técnica junto ao meu parceiro especialista em programação. Garanto que a solução final e o banco de dados reflitam as regras do seu negócio com segurança e escalabilidade." }
             ].map((item, i) => (
               <div key={i} className="flex flex-col gap-6 group">
                 <div className="font-display text-5xl font-bold text-border group-hover:text-accent/20 transition-colors">{item.step}</div>
@@ -294,8 +430,49 @@ export default function App() {
             rel="noopener noreferrer"
             className="btn-gradient py-6 px-16 font-display font-bold text-lg uppercase tracking-[0.2em] shadow-2xl"
           >
-            Fale comigo
+            Agendar Sessão de Estratégia
           </a>
+        </div>
+      </section>
+
+      {/* FAQ Section */}
+      <section className="py-32 px-6 bg-paper/50">
+        <div className="max-w-3xl mx-auto">
+          <div className="text-center mb-16">
+            <div className="tech-label text-accent mb-4">Dúvidas Comuns</div>
+            <h2 className="font-display text-3xl md:text-5xl font-bold uppercase tracking-tight">Perguntas Frequentes</h2>
+          </div>
+
+          <div className="flex flex-col gap-4">
+            {faqData.map((item, i) => (
+              <div 
+                key={i} 
+                className="border border-border bg-white rounded-2xl overflow-hidden transition-all duration-300 hover:border-accent/30 shadow-sm"
+              >
+                <button 
+                  onClick={() => setOpenFaqIndex(openFaqIndex === i ? null : i)}
+                  className="w-full p-6 md:p-8 flex items-center justify-between text-left group"
+                >
+                  <span className="font-display font-bold text-lg md:text-xl pr-8">{item.q}</span>
+                  <ChevronDown 
+                    className={`w-5 h-5 text-accent transition-transform duration-300 ${openFaqIndex === i ? 'rotate-180' : ''}`} 
+                  />
+                </button>
+                <motion.div
+                  initial={false}
+                  animate={{ height: openFaqIndex === i ? "auto" : 0, opacity: openFaqIndex === i ? 1 : 0 }}
+                  transition={{ duration: 0.3, ease: "easeInOut" }}
+                  className="overflow-hidden"
+                >
+                  <div className="px-6 md:px-8 pb-8 text-slate leading-relaxed font-medium">
+                    <div className="pt-2 border-t border-border/50">
+                      {item.a}
+                    </div>
+                  </div>
+                </motion.div>
+              </div>
+            ))}
+          </div>
         </div>
       </section>
 
@@ -330,7 +507,7 @@ export default function App() {
           <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/>
         </svg>
         <span className="max-w-0 overflow-hidden group-hover:max-w-xs group-hover:mr-3 transition-all duration-500 font-display font-bold text-sm uppercase tracking-widest whitespace-nowrap">
-          Fale comigo
+          Falar com Especialista
         </span>
       </a>
     </div>
