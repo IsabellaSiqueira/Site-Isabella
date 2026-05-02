@@ -34,7 +34,8 @@ import {
   MousePointer2,
   PenTool,
   Video,
-  Box
+  Box,
+  Linkedin
 } from "lucide-react";
 import { useState } from "react";
 
@@ -317,6 +318,21 @@ export default function App() {
                   <div className="font-display font-bold text-sm">Visão de Ponta a Ponta</div>
                 </div>
               </div>
+
+              <div className="flex">
+                <a 
+                  href="https://www.linkedin.com/in/isabella-tragante/" 
+                  target="_blank" 
+                  rel="noopener noreferrer"
+                  className="flex items-center gap-3 text-slate hover:text-accent font-display font-bold text-sm uppercase tracking-widest transition-all group"
+                >
+                  <span className="p-2 bg-slate/5 group-hover:bg-accent/10 rounded-lg transition-colors">
+                    <Linkedin className="w-5 h-5" />
+                  </span>
+                  Ver trajetória completa no LinkedIn
+                </a>
+              </div>
+
               <p>
                 Por isso, combino design focado em conversão com automações de processos (n8n), inteligência artificial (NotebookLM) e bancos de dados (SQL) para entregar soluções que resolvem problemas reais da sua operação.
               </p>
